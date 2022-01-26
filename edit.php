@@ -16,6 +16,11 @@ $pokemon = json_decode($inputJSON, TRUE);
 //     exit;
 // }
 
+if(!isset($pokemon["name"]) or !isset($pokemon["imageSrc"]) or !isset($pokemon["level"]) or !isset($pokemon["power"])){
+    header($_SERVER["SERVER_PROTOCOL"] . " 400 miss some(s) value(s) in request", true, 400);
+    exit;
+}
+
 $file_name = "data.json";
 $pokemons = [];
 $index = 0;

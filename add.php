@@ -11,7 +11,10 @@ $pokemon = json_decode($inputJSON, TRUE);
 // Vérifier la validité du champion et l'ajouter:
 // En BDD -> C'est ce qu'il faut faire dans un vrai projet
 // === Dans un fichier ===
-
+if(!isset($pokemon["name"]) or !isset($pokemon["imageSrc"]) or !isset($pokemon["level"]) or !isset($pokemon["power"])){
+    header($_SERVER["SERVER_PROTOCOL"] . " 400 miss some(s) value(s) in request", true, 400);
+    exit;
+}
 // if(!array_key_exists("name", $pokemon) || !array_key_exists("url", $pokemon) || !array_key_exists("level", $pokemon) || !array_key_exists("power", $pokemon)) {
 //     http_response_code(409);
 //     exit;

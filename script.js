@@ -41,17 +41,22 @@ async function send_pokemon() {
         "imageSrc": `${url}`
     };
     // envoi du pokémon en POST
-    await fetch("/add.php", {
+    const reponse = await fetch("/add.php", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(champion)
     });
-    
+    if(reponse.status==400) {
+        let msg = ("Please enter the requested information")
+        alert(msg)
+    }else {
+        let msg = ("Your pokémon has been added")
+        alert(msg)
+    }
     await load_data();
-    let msg = ("Your pokémon has been added")
-    alert(msg)
+    
 }
 
 async function supp() {
@@ -81,14 +86,19 @@ async function editer() {
         "name": name, "level": level, "power": power, "old_name" : edit,
         "imageSrc": `${url}`
     };
-    await fetch("/edit.php", {
+    const repons = await fetch("/edit.php", {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(champions)
     });
-    await load_data();
-    let msg = ("Your pokémon has been edited")
-    alert(msg)
+        if(repons.status==400) {
+            let msg = ("Please enter the requested information")
+            alert(msg)
+        }else {
+            let msg = ("Your pokémon has been edited")
+            alert(msg)
+        }
+        await load_data();
 }
