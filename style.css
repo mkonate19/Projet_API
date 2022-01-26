@@ -2,3 +2,103 @@ img {
     width: 100px;
     height: auto;
 }
+
+#img1 {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 40%;
+}
+
+p {
+    font-size: 20px;
+}
+
+legend {
+    font-size: 30px;
+}
+
+body {
+    background-image: url("https://wallpapertag.com/wallpaper/full/3/1/9/572654-best-pokemon-forest-background-2000x1281-for-ios.jpg");
+    background-size: cover;
+    color: white;
+    
+}
+
+#text {
+    text-align: center;
+    color: white;
+}
+
+.card {
+
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    width: 400px;
+    margin-bottom: 10px;
+    background-color: rgba(38, 110, 53, 0.5);
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+input {
+    
+    padding: 4px 9px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+select {
+    padding: 4px 9px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 10px;
+    color: #FFFFFF;
+    padding: 8px;
+    width: 80px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius : 10%;
+  }
+  
+  .button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }

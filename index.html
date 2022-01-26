@@ -1,24 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les pokémons</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pokémon ⚡</title>
+    <link rel="icon" href="favicon.ico" />
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div>
-        Name: <input type="text" id="name_input">
-        LEVEL: <input type="number" id="level_input">
-        POWER: <input type="text" id="power_input">
 
-        <button onclick="send_pokemon()">Ajouter</button>
-    </div>
-        <h1>Pokémons</h1>
-        <div id="content">Vous devez activer JS</div>
-        <h3>Fin de la page</h3>
+<body>
+    <div id="text">
+        <img id = "img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"><br><br>
+        <fieldset>
+            <legend>Welcome to pokémon</legend>
+            <p>Create your pokémon</p><br>
+        
+            Name: <input placeholder ="Please give your pokemon a name"type="text" id="name_input" required>
+            Url: <input placeholder ="Your chosen image url" type="text" id="url_input" required>
+            Level: <input placeholder ="Level"type="number" id="level_input" required>
+            Type of power: <input placeholder ="Type of power"type="text" id="power_input" required>
+            <button type = "submit" class ="button"onclick="send_pokemon()">Ajouter</button><br><br><br><br>
+        
+            Delete a pokémon : <select id="supprimer_selecteur"></select>
+            <button class ="button" onclick="supp()">Supprimer</button><br><br>
+
+            <p>Edit your pokémon</p> <br>
+            Name: <input placeholder ="Please give your pokemon a name" type="text" id="name_edit" required>
+            Url: <input placeholder ="Your chosen image url" type="text" id="url_edit" required>
+            Level: <input placeholder ="Level" type="number" id="level_edit"required>
+            Type of power: <input placeholder ="Type of power" type="text" id="power_edit" required><br><br><br>
+
+            Editing a pokémon :<select id="editer_selecteur"></select>
+            <button class ="button" onclick="editer()">Editer</button><br><br>
+        
+        </fieldset>
+    </div> <br><br><br>
+        
+        
+    <div id="content"></div>
 
 </body>
+
 </html>

@@ -1,0 +1,34 @@
+https://swapi.dev/api/starships
+###
+https://swapi.dev/api/starships/2
+###
+https://swapi.dev/api/starships/5
+###
+http://localhost:8000/champions.php
+###
+http://localhost/2023BIE2/API/random.php
+###
+http://localhost/2023BIE2/API/champions2.php?name=jinx
+###
+http://localhost/2023BIE2/API/champions2.php?name=teemo
+###
+http://127.0.0.1:9000/champions3.php
+###
+http://127.0.0.1:9000/rec_champions.php
+###
+POST http://127.0.0.1:9000/add_champions.php
+Content-Type: application/json
+
+{
+    "name" : "teemo",
+    "HP": 90
+}
+###
+PUT http://127.0.0.1:8000/edit.php
+Content-Type: application/json
+
+{
+    "name" : "teemo",
+    "level": 90,
+    "old_name" : "pikachu"
+}

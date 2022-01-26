@@ -12,6 +12,10 @@ $pokemon = json_decode($inputJSON, TRUE);
 // En BDD -> C'est ce qu'il faut faire dans un vrai projet
 // === Dans un fichier ===
 
+// if(!array_key_exists("name", $pokemon) || !array_key_exists("url", $pokemon) || !array_key_exists("level", $pokemon) || !array_key_exists("power", $pokemon)) {
+//     http_response_code(409);
+//     exit;
+// }
 $file_name = "data.json";
 $pokemons = [];
 if (file_exists($file_name)) {
@@ -25,38 +29,6 @@ array_push($pokemons, $pokemon);
 
 // Mise à jour du fichier
 file_put_contents($file_name, json_encode($pokemons));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
